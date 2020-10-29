@@ -120,7 +120,7 @@ function setup()
 function draw()
 {
   
-  background("yellow");
+  background("white");
   
   text("Score: " +score,500,20);
   
