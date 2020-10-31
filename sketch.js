@@ -136,6 +136,19 @@ function draw()
       ground.velocityX=-2;
       
        score=score+Math.round(frameCount/60);
+
+       if ((touches.length>0 || keyDown("space")) && trex.y >= height-120)
+        
+       {
+         
+         jumpsound.play();
+         
+         trex.velocityY=-10;
+         touches= [];
+         
+       }
+
+
       
       if(score>0 && score%100==0){
         
@@ -152,12 +165,12 @@ function draw()
             ground.x=ground.width/2;
           }
       
-      if(keyDown("space") && trex.y>=100)
-          {
-            trex.velocityY=-10;
+     // if(keyDown("space") && trex.y>=100)
+      //    {
+         //   trex.velocityY=-10;
             
-            jumpsound.play();
-          }
+         //   jumpsound.play();
+          //}
       generatecloud();
       generateobstacles();
       
